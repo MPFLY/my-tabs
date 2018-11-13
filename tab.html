@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style/index.css">
+
+  <title>组件-我的选项卡</title>
+</head>
+
+<body>
+  <div class="tab-container">
+    <div class="tabs">
+      <ul>
+        <li class="tab-selected">选项卡1
+          <i class="animated fadeIn"></i>
+        </li>
+        <li>选项卡2
+          <i class="animated fadeIn"></i>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-content">
+      <div class="tab-content-selected">
+        选项卡1
+      </div>
+      <div>
+        选项卡2
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  $('.tabs >ul >li').click(function () {
+    let index = $(this).index();
+
+    $(this).addClass('tab-selected').siblings().removeClass('tab-selected')
+
+    $('.tab-content >div:eq(' + index + ')').addClass('tab-content-selected').siblings().removeClass(
+      'tab-content-selected')
+  })
+
+</script>

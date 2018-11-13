@@ -1,0 +1,48 @@
+@import "reset.css";
+@import "animate.css";
+body {
+  background: #dddddd;
+}
+.tab-container {
+  width: 500px;
+  height: 500px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.tab-container .tabs ul {
+  padding: 10px 10px 5px 10px;
+  box-shadow: 1.3px 1.5px 4px 0px rgba(255, 65, 88, 0.43);
+  border-radius: 10px;
+  background: linear-gradient(90deg, #ff1481 0%, #ff5d3e 100%);
+}
+.tab-container .tabs ul .tab-selected > i {
+  display: block;
+}
+.tab-container .tabs ul li {
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 0px 10px;
+  padding-top: 7px;
+}
+.tab-container .tabs ul li i {
+  display: none;
+  width: 30px;
+  height: 4px;
+  background: #ffffff;
+  margin: 0px auto;
+  border-radius: 10px;
+  margin-top: 8px;
+  transition: .3s;
+}
+.tab-container .tab-content .tab-content-selected {
+  display: block;
+}
+.tab-container .tab-content > div {
+  display: none;
+  padding: 20px 0;
+  transition: .3s;
+}
